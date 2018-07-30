@@ -7,7 +7,7 @@ require 'fileutils'
 def download_angular_material(angular_material_zip=nil)
   $VERBOSE = true
   size = ""
-  angular_material_zip = 'https://github.com/angular/material2/archive/master.zip'
+  angular_material_zip = 'https://github.com/angular/material2/archive/6.4.x.zip'
   puts "Get #{angular_material_zip}"
   open( angular_material_zip, 
     :content_length_proc => lambda {|t|
