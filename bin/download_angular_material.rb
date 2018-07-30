@@ -30,7 +30,7 @@ def download_angular_material(angular_material_zip=nil)
           }
         end
     }
-  FileUtils.cp_r "material2-master/src/.", "../vendor/assets/javascripts/angular-material"
-  FileUtils.cp_r "material2-master/src/.", "../vendor/assets/stylesheets/angular-material"
+  FileUtils.cp_r "angular-material/src/.", "../vendor/assets/javascripts/angular-material"
+  FileUtils.cp_r "angular-material/src/.", "../vendor/assets/stylesheets/angular-material"
   puts "Download and extract Angular Material [OK]                                                 "
 end
