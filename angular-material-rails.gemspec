@@ -5,9 +5,7 @@ Gem::Specification.new do |s|
   s.name        = "angular-material-rails"
   s.version     = AngularMaterial::Rails::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Alex Vangelov"]
-  s.email       = ["email@data.bg"]
-  s.homepage    = "http://rubygems.org/gems/angular-material-rails"
+  s.authors     = ["Emmanul Cohen-Laroque"]
   s.summary     = "Using Angular Material with Rails"
   s.description = "This gem adds Angular Material to Rails assets pipeline"
   s.licenses     = ["AV","MIT"]
