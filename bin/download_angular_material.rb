@@ -4,7 +4,7 @@ require 'zip'
 require 'fileutils'
 
 
-def download_angular_material(angulal_material_zip=nil)
+def download_angular_material(angular_material_zip=nil)
   $VERBOSE = true
   size = ""
   angular_material_zip = 'https://github.com/angular/material2/archive/master.zip'
@@ -30,7 +30,7 @@ def download_angular_material(angulal_material_zip=nil)
           }
         end
     }
-  FileUtils.cp_r "angular-material/material-1.0.0-rc2/src/.", "../vendor/assets/javascripts/angular-material"
-  FileUtils.cp_r "angular-material/material-1.0.0-rc2/src/.", "../vendor/assets/stylesheets/angular-material"
+  FileUtils.cp_r "material2-master/src/.", "../vendor/assets/javascripts/angular-material"
+  FileUtils.cp_r "material2-master/src/.", "../vendor/assets/stylesheets/angular-material"
   puts "Download and extract Angular Material [OK]                                                 "
 end
