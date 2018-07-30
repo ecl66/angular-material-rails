@@ -22,8 +22,9 @@ def download_angular_material(angular_material_zip=nil)
         Zip::File.open(zf.path) do |zipfile|
           zipfile.each{|e|
             unless e.to_s =~ /\.spec\.js$/
-              print "Extracting #{File.basename(e.to_s)}                                        \r"
+              print "Extracting e.to_s                                        \r"
               fpath = File.join('angular-material', e.to_s)
+              print "Path: fpath.to_s"
               FileUtils.mkdir_p(File.dirname(fpath))
               zipfile.extract(e, fpath){ true }
             end
