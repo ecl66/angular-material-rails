@@ -33,5 +33,8 @@ def download_angular_material(angular_material_zip=nil)
     }
   FileUtils.cp_r "angular-material/material2-6.4.x/src/.", "../vendor/assets/javascripts/angular-material"
   FileUtils.cp_r "angular-material/material2-6.4.x/src/.", "../vendor/assets/stylesheets/angular-material"
+  val = %x(cd ../vendor/stylesheets; ls -a angular-material/*.scss | cut -d "." -f 1|awk '{print "@import \x27"$1"\x27;"}'  >angular-material-rails.scss; cd ..)
+  val = %x(cd ../vendor/javascripts; ls -a angular-material/*.js | cut -d "." -f 1|awk '{print "@import \x27"$1"\x27;"}'  >angular-material-rails.js; cd ..)
+  val = %x(cd ../vendor/javascripts; ls -a angular-material/*.js | cut -d "." -f 1|awk '{print "@import \x27"$1"\x27;"}'  >angular-material-rails.js.erb; cd ..)
   puts "Download and extract Angular Material [OK]                                                 "
 end
